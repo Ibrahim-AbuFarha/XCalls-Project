@@ -1,0 +1,252 @@
+main {
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: linear-gradient(135deg, #6366f1, #5b21b6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar .btn-gradient {
+  background: linear-gradient(45deg, #34d399, #10b981);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.sidebar .btn-gradient:hover {
+  transform: scale(1.05);
+}
+
+/* Animated Background for Call Status */
+.animated-background {
+  background: linear-gradient(135deg, #6366f1, #5b21b6);
+  background-size: 400% 400%;
+  animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.call-section {
+  display: flex;
+  align-items: center;
+  height: 100% !important;
+  width: 100%;
+}
+
+.call-section h2,
+.calling-status h2,
+.incoming-call h2 {
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+/**dialer*/
+
+.content .w-75 > div {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dialer-display {
+  font-size: 24px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid #ccc;
+}
+.dialer input {
+  box-shadow: unset !important;
+}
+
+.dialer-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.dialer-buttons button {
+  font-size: 18px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #efefef;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dialer-buttons button:hover {
+  background-color: #e2e2e2;
+}
+.dialer .call {
+  background: linear-gradient(45deg, #34d399, #10b981);
+  color: white !important;
+}
+/** calll summary*/
+.call-summary {
+  text-align: center;
+}
+
+.call-summary button {
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #34d399, #10b981);
+
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.call-summary button:hover {
+  background: linear-gradient(45deg, #2ad194, #0ab67d);
+}
+/**/
+/**call ringing**/
+.call-ringing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.call-status {
+  font-size: 1.2em;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.caller-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.profile-pic {
+  color: #3b82f6;
+  margin-bottom: 15px;
+}
+
+.caller-name {
+  font-size: 1.5em;
+  color: #111827;
+  font-weight: bold;
+}
+
+.caller-number {
+  font-size: 1em;
+  color: #6b7280;
+}
+
+.end-call-btn {
+  background-color: #ef4444;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.end-call-btn:hover {
+  background-color: #dc2626;
+}
+/**call ringing**/
+/**call logs**/
+.call-logs {
+  padding: 20px;
+}
+.call-active {
+  padding: 20px;
+  background-color: #e3f2fd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.timer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.circular-timer {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #e6e6e6;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke: #10b981;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.5s;
+}
+
+.timer-text {
+  fill: #10b981;
+  font-size: 8px;
+  text-anchor: middle;
+}
+
+.end-call-btn {
+  transition: transform 0.3s ease;
+}
+
+.end-call-btn:hover {
+  transform: scale(1.05);
+}
+/**call logs**/
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    width: 100%;
+  }
+  main .content {
+    padding: 20px;
+    gap: 10px;
+    flex-direction: column;
+  }
+  .content .w-75 > div {
+    margin: unset;
+    max-width: 100%;
+  }
+  main .content > div {
+    width: 100% !important;
+  }
+}
